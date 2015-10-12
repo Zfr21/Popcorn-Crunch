@@ -105,7 +105,6 @@ public class Movie {
     public String getPosterPath() {
         return posterPath;
     }
-
     public void setPosterPath(String posterPath) {
         this.posterPath = posterPath;
     }

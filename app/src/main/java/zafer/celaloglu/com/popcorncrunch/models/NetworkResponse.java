@@ -16,6 +16,7 @@ public class NetworkResponse {
     private int totalResults;
     private List<Movie> results;
 
+
     public int getPage() {
         return page;
     }

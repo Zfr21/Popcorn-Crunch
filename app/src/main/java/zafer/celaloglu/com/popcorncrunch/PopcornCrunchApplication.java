@@ -23,6 +23,4 @@ public class PopcornCrunchApplication extends Application {
 
         TheMovieDBApi.create(Keys.THE_MOVIE_DB);
     }
-
-
 }

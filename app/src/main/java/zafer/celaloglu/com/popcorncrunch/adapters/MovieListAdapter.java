@@ -50,7 +50,6 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.View
                 });
 
             }
-
             @Override
             public void onBitmapFailed(Drawable errorDrawable) {
 

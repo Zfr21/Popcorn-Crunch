@@ -14,6 +14,7 @@ public class NetworkResponse {
     private int totalPages;
     @SerializedName("total_results")
     private int totalResults;
+
     private List<Movie> results;
 
 

@@ -17,7 +17,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutResourse());
+        setContentView(getLayoutResource());
 
         mToolbar = (Toolbar)findViewById(R.id.toolbar);
         if(mToolbar != null){
@@ -31,7 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected Toolbar getToolbar(){return mToolbar;}
 
-    protected abstract int getLayoutResourse();
+    protected abstract int getLayoutResource();
 
     protected abstract boolean getDisplayHomeAsUpEnabled();
 }

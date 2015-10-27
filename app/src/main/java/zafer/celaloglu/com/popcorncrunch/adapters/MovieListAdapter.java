@@ -1,5 +1,6 @@
 package zafer.celaloglu.com.popcorncrunch.adapters;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import zafer.celaloglu.com.popcorncrunch.R;
+import zafer.celaloglu.com.popcorncrunch.activities.DetailsActivity;
 import zafer.celaloglu.com.popcorncrunch.models.Movie;
 import zafer.celaloglu.com.popcorncrunch.models.NetworkResponse;
 
@@ -90,7 +92,10 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.View
         @Override
         public void onClick(View v) {
             int position = getAdapterPosition();
-            Movie movie = response.getResults().get(position);
+            Intent intent = new Intent(v.getContext(), DetailsActivity.class);
+            intent.putExtra("ID", response.getResults().get(position).getId());
+            v.getContext().startActivity(intent);
+            //Movie movie = response.getResults().get(position);
         }
     }
 

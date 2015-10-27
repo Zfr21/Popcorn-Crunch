@@ -6,6 +6,7 @@ import com.squareup.okhttp.Cache;
 import com.squareup.okhttp.OkHttpClient;
 
 import zafer.celaloglu.com.popcorncrunch.networking.TheMovieDBApi;
+import zafer.celaloglu.com.popcorncrunch.networking.TheMovieDBDetailsApi;
 
 /**
  * Created by zafer on 9.10.15.
@@ -28,6 +29,8 @@ public class PopcornCrunchApplication extends Application {
         cache = new Cache(getCacheDir(), cacheSize);
         client.setCache(cache);
 
+
+        TheMovieDBDetailsApi.create(Keys.THE_MOVIE_DB);
         TheMovieDBApi.create(Keys.THE_MOVIE_DB);
     }
 
